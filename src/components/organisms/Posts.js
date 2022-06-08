@@ -2,8 +2,12 @@
 import './organisms.css';
 
 
+// Importing necessary components
+import PostCard from '../molecules/PostCard';
+
+
 // Component that is being exported
-const Posts = () => {
+const Posts = (props) => {
     return(
         <section>
             
