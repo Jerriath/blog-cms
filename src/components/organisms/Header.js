@@ -1,17 +1,22 @@
 // Importing stylesheet
 import './organisms.css';
+import { Link } from 'react-router-dom';
 
 
 // Component that is being exported
 const Header = () => {
     return(
         <header className='site-header' >
-            <h1 className='header-font header-content' >
-                Poggy Bloggy
-            </h1>
-            <h2 className='header-anchor header-content'>
-                About
-            </h2>
+            <Link className='header-font header-content' to='/'>
+                <h1>
+                    Poggy Bloggy
+                </h1>            
+            </Link>
+            <Link className='header-anchor header-content' to='/about'>
+                <h2>
+                    About
+                </h2>            
+            </Link>
         </header>
     );
 };
