@@ -10,10 +10,14 @@ import PostCard from '../molecules/PostCard';
 const PostsSlider = (props) => {
     return(
         <section className='posts-slider' >
-            
+            <PostCard title='Example Title' preview='Do you think that there rea...' author='Jerriath' date={Date.now()} />
+            <PostCard title='Example Title' preview='Do you think that there rea...' author='Jerriath' date={Date.now()} />
+            <PostCard title='Example Title' preview='Do you think that there rea...' author='Jerriath' date={Date.now()} />
+            <PostCard title='Example Title' preview='Do you think that there rea...' author='Jerriath' date={Date.now()} />
+            <PostCard title='Example Title' preview='Do you think that there rea...' author='Jerriath' date={Date.now()} />
         </section>
     );
 };
 
 
-export default Posts;
+export default PostsSlider;
