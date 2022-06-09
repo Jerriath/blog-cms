@@ -19,18 +19,23 @@ import HomeSplash from '../molecules/HomeSplash';
 // Page that is being exported
 const HomePage = () => {
     // Setting some states
-    const [posts, setPosts] = useState([]);
+    const [newPosts, setNewPosts] = useState([]);
+    const [oldPosts, setOldPosts] = useState([]);
 
     useEffect(() => {
         console.log(process.env.REACT_APP_APIROOT);
-        getPosts().then((newPosts) => { console.log(newPosts); setPosts(newPosts) });
+        getPosts().then((postsArray) => { 
+            console.log(postsArray);
+            setNewPosts(postsArray[0]);
+            setOldPosts(postsArray[1])
+        });
     }, [])
 
     return (
         <main>
             <HomeSplash />
-            <PostsSlider posts={posts} />
-            <OlderPosts />
+            <PostsSlider posts={newPosts} />
+            <OlderPosts posts={oldPosts} />
         </main>
     );
 };
