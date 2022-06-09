@@ -19,12 +19,16 @@
     top: 0;
 }
 
-.site-header h1 {
+.header-font {
     margin: auto 1rem;
+    font-size: 2rem;
+    font-weight: 900;
 }
 
-.site-header h2 {
+.header-anchor {
     margin: auto 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 

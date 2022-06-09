@@ -14,8 +14,9 @@
     max-width: calc(100% - 12rem);
     background: linear-gradient(to right,rgb(175, 175, 175), rgb(240, 240, 240));
     padding: 4rem 6rem;
+    padding-top: 8rem;
     text-align: center;
-    height: 10rem;
+    height: 14rem;
 }
 
 .splash-article {
@@ -24,12 +25,14 @@
 }
 
 .splash-title {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-size: 3rem;
+    font-weight: 900;
 }
 
 .splash-content {
     font-size: 1.5rem;
+    margin-left: 1.5rem;
 }
 
 
