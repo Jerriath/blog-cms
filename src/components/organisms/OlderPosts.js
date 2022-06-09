@@ -7,7 +7,7 @@ import PostCard from '../molecules/PostCard';
 
 
 // Component that is being exported
-const Posts = (props) => {
+const OlderPosts = (props) => {
     return(
         <section className='posts-section' >
             
@@ -16,4 +16,4 @@ const Posts = (props) => {
 };
 
 
-export default Posts;
+export default OlderPosts;

@@ -12,7 +12,6 @@ import HomePage from './components/pages/HomePage';
 import AboutPage from './components/pages/AboutPage';
 import PostPage from './components/pages/PostPage';
 import Footer from './components/organisms/Footer';
-import PostSlider from './components/organisms/PostsSlider';
 
 
 // Helper functions; eventually will put in dedicated file
@@ -29,7 +28,6 @@ const App = () => {
         <div className='app' >
             <Header />
             {renderHomePage()}
-            <PostSlider />
             <Footer />
         </div>
     );
