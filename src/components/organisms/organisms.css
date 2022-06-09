@@ -2,8 +2,9 @@
     I.   Header styles
     II.  Footer styles
     III. Messages styles
-    IV.  Posts styles
-    V.   Miscelleneous styles
+    IV.  PostsSlider styles
+    V.   Posts styles
+    VI.  Miscelleneous styles
    ---------- Table of Contents ---------- */
 
 /* ---------- Header styles ---------- */
@@ -20,4 +21,17 @@
 
 .site-header h2 {
     margin: auto 2rem;
+}
+
+
+/* ---------- PostsSlider styles ---------- */
+.posts-slider {
+    display: flex;
+    width: calc(95% - 2rem);
+    max-width: calc(95% - 2rem);
+    margin: 1rem auto;
+    overflow-x: scroll;
+    padding: 1rem;
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
 }
