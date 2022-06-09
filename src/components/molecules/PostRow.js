@@ -7,9 +7,9 @@ import moment from 'moment';
 
 
 // Component that is being exported
-const PostCard = (props) => {
+const PostRow = (props) => {
     return(
-        <article className='post-row'>
+        <article className={`${props.colorScheme} post-row`}>
             <div className='row-content'>
                 <h3 className='row-font'>
                     {props.title}
@@ -23,4 +23,4 @@ const PostCard = (props) => {
 };
 
 
-export default PostCard;
+export default PostRow;
