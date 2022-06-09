@@ -3,7 +3,6 @@ import './App.css';
 
 
 // Importing necessary node modules
-import { useState, useEffect } from 'react';
 
 
 // Importing necessary components
