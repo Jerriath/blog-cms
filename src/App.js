@@ -3,7 +3,6 @@ import './App.css';
 
 
 // Importing necessary node modules
-import { useState, useEffect } from 'react';
 
 
 // Importing necessary components
@@ -12,12 +11,7 @@ import HomePage from './components/pages/HomePage';
 import AboutPage from './components/pages/AboutPage';
 import PostPage from './components/pages/PostPage';
 import Footer from './components/organisms/Footer';
-
-
-// Helper functions; eventually will put in dedicated file
-const renderHomePage = () => {
-    return (<HomePage />);
-}
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 // Parent app object being rendered by index.js
@@ -25,11 +19,18 @@ const App = () => {
 
 
     return(
-        <div className='app' >
-            <Header />
-            {renderHomePage()}
-            <Footer />
-        </div>
+        <Router>
+            <div className='app' >
+                <Header />
+                <Routes>
+                    <Route path='/about' element={<AboutPage />} />
+                    <Route path='/post' element={<PostPage />} />
+                    <Route path='/' element={<HomePage />} />
+                </Routes>
+                <Footer />
+            </div>            
+        </Router>
+
     );
 };
 

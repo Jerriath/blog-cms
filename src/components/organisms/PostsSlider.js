@@ -6,21 +6,20 @@ import './organisms.css';
 import PostCard from '../molecules/PostCard';
 
 
-// Mock array for holding post
-const postsArray = [
-    {title: 'Example Title', preview:'Do you think that there rea...', author:'Jerriath', date: Date.now() },
-    {title: 'Example Title', preview:'Do you think that there rea...', author:'Jerriath', date: Date.now() },
-    {title: 'Example Title', preview:'Do you think that there rea...', author:'Jerriath', date: Date.now() },
-    {title: 'Example Title', preview:'Do you think that there rea...', author:'Jerriath', date: Date.now() },
-    {title: 'Example Title', preview:'Do you think that there rea...', author:'Jerriath', date: Date.now() }
-]
-
-
 // Component that is being exported
 const PostsSlider = (props) => {
     return(
         <section className='posts-slider' >
-            {postsArray.map(post => {return(<PostCard title={post.title} preview={post.preview} author={post.author} date={post.date} />)})}
+            {props.posts.map(post => {
+                return(
+                    <PostCard 
+                        key={post._id} 
+                        title={post.title} 
+                        preview={post.content.length > 25 ? `${post.content.slice(0, 25)}...` : post.content} 
+                        author={post.user.username} 
+                        date={post.date} />)
+                })
+            }
         </section>
     );
 };
