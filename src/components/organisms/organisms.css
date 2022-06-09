@@ -5,3 +5,19 @@
     IV.  Posts styles
     V.   Miscelleneous styles
    ---------- Table of Contents ---------- */
+
+/* ---------- Header styles ---------- */
+.site-header {
+    height: 4rem;
+    background: linear-gradient(rgb(240, 240, 240), rgb(175, 175, 175), rgb(240, 240, 240));
+    display: flex;
+    align-content: center;
+}
+
+.site-header h1 {
+    margin: auto 1rem;
+}
+
+.site-header h2 {
+    margin: auto 2rem;
+}
