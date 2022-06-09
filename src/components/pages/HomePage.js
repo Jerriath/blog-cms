@@ -3,7 +3,8 @@ import './pages.css';
 
 
 // Importing necessary components
-import Posts from '../organisms/Posts';
+import OlderPosts from '../organisms/OlderPosts';
+import PostsSlider from '../organisms/PostsSlider';
 import HomeSplash from '../molecules/HomeSplash';
 
 
@@ -12,7 +13,8 @@ const HomePage = () => {
     return (
         <main>
             <HomeSplash />
-            <Posts />
+            <PostsSlider />
+            <OlderPosts />
         </main>
     );
 };
