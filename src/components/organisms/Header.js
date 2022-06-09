@@ -6,10 +6,10 @@ import './organisms.css';
 const Header = () => {
     return(
         <header className='site-header' >
-            <h1 className='header-font' >
+            <h1 className='header-font header-content' >
                 Poggy Bloggy
             </h1>
-            <h2 className='header-anchor'>
+            <h2 className='header-anchor header-content'>
                 About
             </h2>
         </header>
