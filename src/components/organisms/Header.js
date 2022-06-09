@@ -5,11 +5,11 @@ import './organisms.css';
 // Component that is being exported
 const Header = () => {
     return(
-        <header class='site-header' >
-            <h1 class='header-logo' >
+        <header className='site-header' >
+            <h1 className='header-font' >
                 Poggy Bloggy
             </h1>
-            <h2>
+            <h2 className='header-anchor'>
                 About
             </h2>
         </header>

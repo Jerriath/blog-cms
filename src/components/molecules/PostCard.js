@@ -2,6 +2,10 @@
 import './molecules.css';
 
 
+// Importing node modules
+import moment from 'moment';
+
+
 // Component that is being exported
 const PostCard = (props) => {
     return(
@@ -17,8 +21,8 @@ const PostCard = (props) => {
                     <h4 className='footer-font'>
                         {props.author}
                     </h4>
-                    <p classname='footer-font'>
-                        {props.date}
+                    <p className='footer-font'>
+                        {moment(props.date).format('MM/DD/YYYY')}
                     </p>
                 </footer>
             </div>
