@@ -7,9 +7,9 @@ import PostCard from '../molecules/PostCard';
 
 
 // Component that is being exported
-const Posts = (props) => {
+const PostsSlider = (props) => {
     return(
-        <section className='posts-section' >
+        <section className='posts-slider' >
             
         </section>
     );
