@@ -8,10 +8,10 @@ const HomeSplash = () => {
         <section className='splash-section'>
             <article className='splash-article'>
                 <h2 className='splash-title'>
-
+                    Welcome to my Blog
                 </h2>
                 <p className='splash-content'>
-
+                    Check out how my mind works
                 </p>
             </article>
         </section>
