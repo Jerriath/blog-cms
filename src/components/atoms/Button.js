@@ -1,5 +1,5 @@
 // Importing stylesheet
-import 'atoms.css';
+import './atoms.css';
 
 
 // Component being exported

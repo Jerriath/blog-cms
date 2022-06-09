@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+// Importing stylesheet
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+// Importing necessary node modules
+import { useState, useEffect } from 'react';
+
+
+// Importing necessary components
+import Header from './components/organisms/Header';
+import HomePage from './components/pages/HomePage';
+import AboutPage from './components/pages/AboutPage';
+import PostPage from './components/pages/PostPage';
+import Footer from './components/organisms/Footer';
+
+
+// Helper functions; eventually will put in dedicated file
+const renderHomePage = () => {
+    return (<HomePage />);
 }
+
+
+// Parent app object being rendered by index.js
+const App = () => {
+
+
+    return(
+        <div className='app' >
+            <Header />
+            {renderHomePage()}
+            <Footer />
+        </div>
+    );
+};
 
 export default App;
