@@ -1,16 +1,40 @@
 /* ---------- Table of Contents ---------- 
-    I.   HomePage styles
-    II.  AboutPage styles
-    III. PostPage styles
-    IV.  Miscelleneous styles
+    I.   Page styles
+    II.  Miscelleneous styles
    ---------- Table of Contents ---------- */
 
 
 /* ---------- HomePage styles ---------- */
-
-
-
-/* ---------- Miscelleneous styles ---------- */
 main {
     width: 100%;
 }
+ /*---------- AboutPage styles ---------- */
+.about-section {
+    width: calc(100% - 12rem);
+    max-width: calc(100% - 12rem);
+    background: linear-gradient(to right,rgb(175, 175, 175), rgb(240, 240, 240));
+    padding: 4rem 6rem;
+    padding-top: 8rem;
+    text-align: center;
+    height: calc(100vh - 12rem);
+}
+
+.about-article {
+    text-align: left;
+    height: 10rem;
+}
+
+.about-title {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.about-content {
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 40%;
+}
+
+
+/* ---------- Miscelleneous styles ---------- */
