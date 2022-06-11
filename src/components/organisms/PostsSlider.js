@@ -17,7 +17,8 @@ const PostsSlider = (props) => {
                         title={post.title} 
                         preview={post.content.length > 25 ? `${post.content.slice(0, 25)}...` : post.content} 
                         author={post.user.username} 
-                        date={post.date} />)
+                        date={post.date}
+                        id={post._id} />)
                 })
             }
         </section>

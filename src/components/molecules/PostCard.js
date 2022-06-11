@@ -4,12 +4,13 @@ import './molecules.css';
 
 // Importing node modules
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 
 // Component that is being exported
 const PostCard = (props) => {
     return(
-        <article className='post-card'>
+        <Link to={`/posts/${props.id}`} className='post-card'>
             <div className='post-content'>
                 <h3 className='post-title'>
                     {props.title}
@@ -26,7 +27,7 @@ const PostCard = (props) => {
                     </p>
                 </footer>
             </div>
-        </article>
+        </Link>
     );
 };
 

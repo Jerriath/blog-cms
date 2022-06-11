@@ -7,13 +7,14 @@ import Messages from '../organisms/Messages';
 
 
 // Page that is being exported
-const HomePage = () => {
+const PostPage = () => {
+    
     return (
         <main>
             <section>
                 <article>
                     <h2>
-
+                        
                     </h2>
                     <p>
 
@@ -26,4 +27,4 @@ const HomePage = () => {
 };
 
 
-export default HomePage;
+export default PostPage;
