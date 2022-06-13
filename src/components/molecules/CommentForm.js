@@ -15,9 +15,9 @@ const submitComment = () => {
 
 
 // Component that is being exported
-const MessageForm = () => {
+const CommentForm = () => {
     return(
-        <article className='message-card'>
+        <article className='comment-card'>
             <form onSubmit={submitComment}>
                 
             </form>
@@ -26,4 +26,4 @@ const MessageForm = () => {
 };
 
 
-export default MessageForm;
+export default CommentForm;

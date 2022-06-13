@@ -3,17 +3,17 @@ import './molecules.css';
 
 
 // Component that is being exported
-const MessageCard = (props) => {
+const CommentCard = (props) => {
     return(
-        <article className='message-card'>
-            <div className='message-content'>
-                <h3 className='message-title'>
+        <article className='comment-card'>
+            <div className='comment-content'>
+                <h3 className='comment-title'>
                     {props.title}
                 </h3>
-                <p className='message-content'>
+                <p className='comment-content'>
                     {props.content}
                 </p>
-                <footer className='message-footer'>
+                <footer className='comment-footer'>
                     <h4 className='footer-font'>
                         {props.author}
                     </h4>
@@ -27,4 +27,4 @@ const MessageCard = (props) => {
 };
 
 
-export default MessageCard;
+export default CommentCard;

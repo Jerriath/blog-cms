@@ -8,3 +8,15 @@ export const getPosts = async () => {
     let postsArray = [newPosts, oldPosts];
     return postsArray;
 }
+
+export const getSinglePost = async (postId) => {
+    let post = (await axios.get(`${process.env.REACT_APP_APIROOT}/posts/${postId}`)).data;
+    post = post.post;
+    return post;
+}
+
+export const getComments = async (postId) => {
+    let comments = (await axios.get(`${process.env.REACT_APP_APIROOT}/comments/`)).data;
+    comments = comments.comments;
+    return comments;
+}
