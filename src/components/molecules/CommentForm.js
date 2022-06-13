@@ -9,17 +9,17 @@ import TextInput from '../atoms/TextInput';
 
 
 // Helper functions needed by component
-const submitComment = () => {
-    return;
-};
+
 
 
 // Component that is being exported
-const CommentForm = () => {
+const CommentForm = (props) => {
     return(
-        <article className='comment-card'>
-            <form onSubmit={submitComment}>
-                
+        <article className='comment-form'>
+            <form onSubmit={null}>
+                <TextInput label='Name: ' onChange={() => null} value='' />
+                <TextArea label='Leave a Comment: ' onChange={() => null} value='' placeHolder='Share what you think...' />
+                <Button text='Submit' callback={() => null} />
             </form>
         </article>
     );

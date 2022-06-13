@@ -7,11 +7,12 @@ const TextArea = (props) => {
     return(
         <fieldset>
             <label>
-
+                {props.label}
             </label>
             <textarea
                 onChange={props.handleChange}
                 value={props.value}
+                placeholder={props.placeHolder}
             >
             </textarea>            
         </fieldset>

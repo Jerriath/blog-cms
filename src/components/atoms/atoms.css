@@ -1,6 +1,43 @@
 /* ---------- Table of Contents ---------- 
     I.   Button styles
-    II.  TextArea styles
-    III. TextInput styles
+    II.  Fieldset styles
     IV.  Miscelleneous styles
    ---------- Table of Contents ---------- */
+
+
+/* ---------- Button styles ---------- */
+button {
+    width: auto;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+
+/* ---------- Fieldset styles ---------- */
+fieldset {
+    margin-top: 0.5rem;
+}
+
+label {
+    position: relative;
+    top: 7px;
+    left: 10px;
+    font-size: 1.15rem;
+}
+
+textarea {
+    width: calc(100% - 1rem);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+input {
+    width: calc(100% - 1rem);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+
+/* ---------- Miscelleneous styles ---------- */

@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 
 // Importing helper functions
-import { getPosts } from './apiCalls';
+import { getPosts } from '../../apiCalls';
 
 
 // Importing necessary components

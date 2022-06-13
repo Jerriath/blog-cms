@@ -12,7 +12,7 @@ import { useParams } from 'react-router-dom';
 
 
 //importing helper functions
-import { getSinglePost, getComments } from './apiCalls';
+import { getSinglePost, getComments } from '../../apiCalls';
 
 
 // Page that is being exported

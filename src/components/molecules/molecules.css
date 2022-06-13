@@ -148,4 +148,16 @@
 }
 
 
+/* ---------- CommentForm styles ---------- */
+.comment-form {
+    width: 100%;
+}
+
+.comment-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
 /* ---------- Miscelleneous styles ---------- */
