@@ -3,6 +3,9 @@ import axios from 'axios';
 export const getPosts = async () => {
     let posts = (await axios.get(`${process.env.REACT_APP_APIROOT}/posts`)).data;
     posts = posts.posts;
+    posts = posts.filter( post => {
+        return post.published;
+    })
     let newPosts = posts.slice(0, 5);
     let oldPosts = posts.slice(5);
     let postsArray = [newPosts, oldPosts];
@@ -16,7 +19,7 @@ export const getSinglePost = async (postId) => {
 }
 
 export const getComments = async (postId) => {
-    let comments = (await axios.get(`${process.env.REACT_APP_APIROOT}/comments/`)).data;
+    let comments = (await axios.get(`${process.env.REACT_APP_APIROOT}/comments/${postId}`)).data;
     comments = comments.comments;
     return comments;
 }

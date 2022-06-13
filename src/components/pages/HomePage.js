@@ -23,9 +23,7 @@ const HomePage = () => {
     const [oldPosts, setOldPosts] = useState([]);
 
     useEffect(() => {
-        console.log(process.env.REACT_APP_APIROOT);
         getPosts().then((postsArray) => { 
-            console.log(postsArray);
             setNewPosts(postsArray[0]);
             setOldPosts(postsArray[1])
         });

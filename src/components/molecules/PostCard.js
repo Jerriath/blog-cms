@@ -15,16 +15,10 @@ const PostCard = (props) => {
                 <h3 className='post-title'>
                     {props.title}
                 </h3>
-                <p className='post-preview'>
-                    {props.preview}
-                </p>
                 <footer className='post-footer'>
                     <h4 className='footer-font'>
-                        {props.author}
-                    </h4>
-                    <p className='footer-font'>
                         {moment(props.date).format('MM/DD/YYYY')}
-                    </p>
+                    </h4>
                 </footer>
             </div>
         </Link>

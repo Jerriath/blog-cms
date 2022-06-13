@@ -26,17 +26,17 @@ const PostPage = (props) => {
         getSinglePost(id).then( retrievedPost => {
             setPost(retrievedPost);
         });
-    })
+    }, []);
     useEffect(() => {
         getComments(id).then( retrievedcomments => {
             setcomments(retrievedcomments);
-        })
-    })
+        });
+    }, []);
     
     return (
         <main>
             <section className='post-section' >
-                <article>
+                <article className='post-article' >
                     <h2>
                         {post.title}
                     </h2>
