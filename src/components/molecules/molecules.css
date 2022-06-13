@@ -49,10 +49,12 @@
     cursor: pointer;
     box-shadow: 3px 3px 3px 3px rgb(200, 200, 200);
     margin: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .post-card:hover {
     box-shadow: 5px 5px 5px 5px rgb(150, 150, 150);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .post-content {
@@ -65,11 +67,12 @@
     font-size: 2rem;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    height: calc(17.5rem - 6.5rem);
+    height: calc(17.5rem - 6rem);
     text-align: center;
 }
 
 .post-footer {
+    position: relative;
     border-top: 1px solid lightgrey;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -77,6 +80,7 @@
     padding-top: 0.25rem;
     background-color: rgb(180, 180, 180);
     text-align: center;
+    width: calc(100% - 2rem);
 }
 
 .footer-font {
