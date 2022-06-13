@@ -31,6 +31,7 @@ textarea {
     width: calc(100% - 1rem);
     border: none;
     padding: 0.5rem;
+    padding-top: 1rem;
     border-radius: 10px;
     resize: none;
 }
@@ -42,11 +43,11 @@ textarea {
 }
 
 .area-label {
-    top: calc(-1rem + -7rem + -0.5rem);
+    top: calc(-1.75rem + -7rem + -0.5rem);
 }
 
 textarea:focus + .area-label {
-    top: calc(-1rem + -7rem + -0.5rem + -0.75rem);
+    top: calc(-1.75rem + -7rem + -0.5rem + -0.75rem);
     animation-name: inflate;
     animation-duration: 0.5s;
     
@@ -56,16 +57,17 @@ input {
     width: calc(100% - 1rem);
     border: none;
     padding: 0.5rem;
+    padding-top: 1rem;
     border-radius: 10px;
 }
 
 
 .input-label {
-    top: calc(-1rem + -1rem + -0.5rem);
+    top: calc(-1.5rem + -1rem + -0.5rem);
 }
 
 input:focus + .input-label {
-    top: calc(-1rem + -1rem + -0.5rem + -0.75rem);
+    top: calc(-1.5rem + -1rem + -0.5rem + -0.75rem);
     animation-name: inflate;
     animation-duration: 0.5s;
 }
