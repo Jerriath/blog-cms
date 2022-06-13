@@ -2,24 +2,25 @@
 import './molecules.css';
 
 
+// Importing node modules
+import moment from 'moment';
+
+
 // Component that is being exported
 const CommentCard = (props) => {
     return(
         <article className='comment-card'>
             <div className='comment-content'>
-                <h3 className='comment-title'>
-                    {props.title}
+                <h3 className='comment-name'>
+                    {props.name}
                 </h3>
-                <p className='comment-content'>
-                    {props.content}
+                <p className='comment-message'>
+                    {props.message}
                 </p>
                 <footer className='comment-footer'>
                     <h4 className='footer-font'>
-                        {props.author}
+                        {moment(props.date).format('MM/DD/YYYY')}
                     </h4>
-                    <p classname='footer-font'>
-                        {props.date}
-                    </p>
                 </footer>
             </div>
         </article>

@@ -2,9 +2,9 @@
     I.   HomeSplash styles
     II.  PostCard styles
     III. PostRow styles
-    IV. MessageCard styles
-    V.  MessageForm styles
-    VI.   Miscelleneous styles
+    IV.  CommentCard styles
+    V.   CommentForm styles
+    VI.  Miscelleneous styles
    ---------- Table of Contents ---------- */
 
 
@@ -118,6 +118,33 @@
 
 .row-font {
 
+}
+
+
+/* ---------- CommentCard styles ---------- */
+.comment-card {
+
+}
+
+.comment-content {
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid darkgrey;
+}
+
+.comment-name {
+    font-size: 1.5rem !important;
+}
+
+.comment-message {
+    padding: 1rem 0;
+}
+
+.comment-footer {
+
+}
+
+.footer-font {
+    font-size: 1rem !important;
 }
 
 
