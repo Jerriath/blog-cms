@@ -45,7 +45,7 @@ const PostPage = (props) => {
                     </p>
                 </article>
             </section>
-            <Comments comments={comments}/>
+            <Comments comments={comments} postId={id} />
         </main>
     );
 };

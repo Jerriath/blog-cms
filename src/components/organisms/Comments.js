@@ -48,7 +48,7 @@ const Comments = (props) => {
             {mockComments.map( comment => {
                 return <CommentCard key={comment._id} name={comment.name} message={comment.message} date={comment.date} />
             })}
-            <CommentForm />
+            <CommentForm postId={props.postId} />
         </section>
     );
 };

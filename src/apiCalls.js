@@ -23,3 +23,13 @@ export const getComments = async (postId) => {
     comments = comments.comments;
     return comments;
 }
+
+export const postComment = async (name, message, postId, date) => {
+    const comment = {
+        name,
+        message,
+        postId,
+        date
+    };
+    await axios.post(`${process.env.REACT_APP_APIROOT}/comments/${postId}`, comment);
+}
