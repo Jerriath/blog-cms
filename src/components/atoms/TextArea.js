@@ -6,15 +6,16 @@ import './atoms.css';
 const TextArea = (props) => {
     return(
         <fieldset>
-            <label>
-                {props.label}
-            </label>
             <textarea
                 onChange={props.handleChange}
                 value={props.value}
                 placeholder={props.placeHolder}
+                rows={7}
             >
-            </textarea>            
+            </textarea>  
+            <label className='area-label' >
+                {props.label}
+            </label>          
         </fieldset>
     );
 };

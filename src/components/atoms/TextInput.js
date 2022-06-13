@@ -6,14 +6,14 @@ import './atoms.css';
 const TextInput = (props) => {
     return(
         <fieldset>
-            <label>
-                {props.label}
-            </label>
             <input
                 onChange={props.handleChange}
                 value={props.value}
                 placeholder={props.placeHolder}
             />
+            <label className='input-label' >
+                {props.label}
+            </label>
         </fieldset>
     );    
 };

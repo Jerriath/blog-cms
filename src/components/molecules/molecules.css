@@ -123,12 +123,12 @@
 
 /* ---------- CommentCard styles ---------- */
 .comment-card {
-
+    border-bottom: 1px solid darkgrey;
+    margin-bottom: 1rem;
 }
 
 .comment-content {
     padding: 0.5rem 2rem;
-    border-bottom: 1px solid darkgrey;
 }
 
 .comment-name {

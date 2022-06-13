@@ -15,14 +15,16 @@ button {
 
 /* ---------- Fieldset styles ---------- */
 fieldset {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 label {
     position: relative;
-    top: 7px;
     left: 10px;
     font-size: 1.15rem;
+    transition: all 0.5s linear;
+    font-weight: 700;
+    display: inline-block;
 }
 
 textarea {
@@ -30,6 +32,24 @@ textarea {
     border: none;
     padding: 0.5rem;
     border-radius: 10px;
+    resize: none;
+}
+
+@keyframes inflate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+
+.area-label {
+    top: calc(-1rem + -7rem + -0.5rem);
+}
+
+textarea:focus + .area-label {
+    top: calc(-1rem + -7rem + -0.5rem + -0.75rem);
+    animation-name: inflate;
+    animation-duration: 0.5s;
+    
 }
 
 input {
@@ -37,6 +57,17 @@ input {
     border: none;
     padding: 0.5rem;
     border-radius: 10px;
+}
+
+
+.input-label {
+    top: calc(-1rem + -1rem + -0.5rem);
+}
+
+input:focus + .input-label {
+    top: calc(-1rem + -1rem + -0.5rem + -0.75rem);
+    animation-name: inflate;
+    animation-duration: 0.5s;
 }
 
 
