@@ -2,9 +2,9 @@
     I.   HomeSplash styles
     II.  PostCard styles
     III. PostRow styles
-    IV. MessageCard styles
-    V.  MessageForm styles
-    VI.   Miscelleneous styles
+    IV.  CommentCard styles
+    V.   CommentForm styles
+    VI.  Miscelleneous styles
    ---------- Table of Contents ---------- */
 
 
@@ -61,27 +61,22 @@
 }
 
 .post-title {
-    padding: 1rem;
-    padding-bottom: 0.25rem;
+    padding: 2rem;
     font-size: 2rem;
-    background: rgb(200, 200, 200);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-}
-
-.post-preview {
-    padding: 3rem;
-    height: calc(100% - 3.75rem - 8.4rem);
-    font-size: 1.5rem;
+    height: calc(17.5rem - 6.5rem);
     text-align: center;
 }
 
 .post-footer {
-    display: flex;
-    justify-content: space-between;
     border-top: 1px solid lightgrey;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     padding: 1rem;
     padding-top: 0.25rem;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
 }
 
 .footer-font {
@@ -123,6 +118,45 @@
 
 .row-font {
 
+}
+
+
+/* ---------- CommentCard styles ---------- */
+.comment-card {
+    border-bottom: 1px solid darkgrey;
+    margin-bottom: 1rem;
+}
+
+.comment-content {
+    padding: 0.5rem 2rem;
+}
+
+.comment-name {
+    font-size: 1.5rem !important;
+}
+
+.comment-message {
+    padding: 1rem 0;
+}
+
+.comment-footer {
+
+}
+
+.footer-font {
+    font-size: 1rem !important;
+}
+
+
+/* ---------- CommentForm styles ---------- */
+.comment-form {
+    width: 100%;
+}
+
+.comment-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 

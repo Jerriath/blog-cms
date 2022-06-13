@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 
 // Importing helper functions
-import { getPosts } from './apiCalls';
+import { getPosts } from '../../apiCalls';
 
 
 // Importing necessary components
@@ -23,9 +23,7 @@ const HomePage = () => {
     const [oldPosts, setOldPosts] = useState([]);
 
     useEffect(() => {
-        console.log(process.env.REACT_APP_APIROOT);
         getPosts().then((postsArray) => { 
-            console.log(postsArray);
             setNewPosts(postsArray[0]);
             setOldPosts(postsArray[1])
         });

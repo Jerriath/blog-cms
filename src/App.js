@@ -24,7 +24,7 @@ const App = () => {
                 <Header />
                 <Routes>
                     <Route path='/about' element={<AboutPage />} />
-                    <Route path='/post' element={<PostPage />} />
+                    <Route path='/posts/:id' element={<PostPage />} />
                     <Route path='/' element={<HomePage />} />
                 </Routes>
                 <Footer />
