@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+// Importing stylesheet
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+// Importing necessary node modules
+
+
+// Importing necessary components
+import Header from './components/organisms/Header';
+import HomePage from './components/pages/HomePage';
+import AboutPage from './components/pages/AboutPage';
+import PostPage from './components/pages/PostPage';
+import Footer from './components/organisms/Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+
+// Parent app object being rendered by index.js
+const App = () => {
+
+
+    return(
+        <Router>
+            <div className='app' >
+                <Header />
+                <Routes>
+                    <Route path='/about' element={<AboutPage />} />
+                    <Route path='/posts/:id' element={<PostPage />} />
+                    <Route path='/' element={<HomePage />} />
+                </Routes>
+                <Footer />
+            </div>            
+        </Router>
+
+    );
+};
 
 export default App;
