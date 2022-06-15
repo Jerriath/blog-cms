@@ -1,6 +1,6 @@
 # Blog CMS
 
-This application was coded in ReactJS and created with create-react-app. This webapp is for my personal use for managing the content on my personal blog. This project is part of "The Odin Project's" Javascript webdev curriculum. This project is my first fullstack application and consists of a React frontend and Express backend.
+This application was coded in ReactJS and created with create-react-app. This webapp is for my personal use for managing the content on my personal blog. This specific application was cloned from my blog-client application which is also on my github. This project is part of "The Odin Project's" Javascript webdev curriculum. This project is my first fullstack application and consists of a React frontend and Express backend.
 
 # Frontend
 
