@@ -59,6 +59,65 @@ main {
     text-indent: 3rem;
     font-size: 1.5rem;
 }
+/* ----- SigninPage styles ----- */
+.signin-section {
+    max-width: 24rem;
+    margin: calc(25vh - 4rem - 2rem - 2rem) auto;
+    padding: 4rem;
+    height: auto;
+}
+
+.signin-section form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 3px 3px rgb(200, 200, 200);
+    padding: 2rem;
+    height: 50vh;
+    justify-content: flex-start;
+    border-radius: 25px;
+}
+
+.signin-section h2 {
+    align-self: center;
+}
+
+.signin-section button {
+    cursor: pointer;
+    margin-top: 40%;
+}
+/* ----- CreatePostPage styles ----- */
+.create-section {
+    padding: 4rem 6rem;
+    background: linear-gradient(to right,rgb(175, 175, 175), rgb(240, 240, 240));
+    padding-bottom: 12rem;
+}
+
+.create-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-section h2 {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    margin-bottom: 3rem;
+}
+
+.publish-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.publish-field label {
+    padding: 1rem;
+}
+
+.publish-field input {
+    width: auto;
+    margin: 1rem;
+}
 
 
 /* ---------- Miscelleneous styles ---------- */

@@ -10,6 +10,7 @@ const TextInput = (props) => {
                 onChange={props.handleChange}
                 value={props.value}
                 placeholder={props.placeHolder}
+                type={props.type ? props.type : 'text'}
             />
             <label className='input-label' >
                 {props.label}

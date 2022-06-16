@@ -17,6 +17,11 @@ const Header = () => {
                     About
                 </h2>            
             </Link>
+            <Link className='header-anchor header-content' to='/posts/create'>
+                <h2>
+                    Create a New Post
+                </h2>            
+            </Link>
         </header>
     );
 };
