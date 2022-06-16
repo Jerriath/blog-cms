@@ -9,6 +9,7 @@ import Comments from '../organisms/Comments';
 // Importing node modules
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import he from 'he';
 
 
 //importing helper functions
@@ -24,6 +25,8 @@ const PostPage = (props) => {
 
     useEffect(() => {
         getSinglePost(id).then( retrievedPost => {
+            retrievedPost.title = he.decode(retrievedPost.title);
+            retrievedPost.content = he.decode(retrievedPost.content);
             setPost(retrievedPost);
         });
     }, []);
