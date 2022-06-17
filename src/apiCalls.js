@@ -56,7 +56,6 @@ export const postMalone = async (title, content, published) => {
         published,
 
     };
-    console.log(published);
     await axios.post(
         `${process.env.REACT_APP_APIROOT}/posts/create`,
         post,
@@ -68,9 +67,22 @@ export const postMalone = async (title, content, published) => {
     );
 }
 
-export const updatePost = () => {
+export const updatePost = async (title, content, published, id) => {
     const token = JSON.parse(localStorage.getItem('jwt'));
-    const post = JSON.parse(localStorage.getItem('jwt'));
+    const post = {
+        title, 
+        content,
+        published
+    };
+    await axios.put(
+        `${process.env.REACT_APP_APIROOT}/posts/${id}`,
+        post,
+        {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }
+    );
 }
 
 export const deletePost = () => {

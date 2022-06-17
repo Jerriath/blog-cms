@@ -30,14 +30,6 @@ const PostPage = (props) => {
     const [content, setContent] = useState('');
     const [published, setPublished] = useState(false);
 
-    // Functions for updating these states
-    const onTitleChange = (e) => {
-        setTitle(e.target.value);
-    }
-    const onContentChange = (e) => {
-        setContent(e.target.value);
-    }
-
     // Hooks for retrieving data from database
     useEffect(() => {
         getSinglePost(id).then( retrievedPost => {
@@ -45,6 +37,7 @@ const PostPage = (props) => {
             retrievedPost.content = he.decode(retrievedPost.content);
             setTitle(retrievedPost.title);
             setContent(retrievedPost.content);
+            setPublished(retrievedPost.published);
         });
     }, []);
     useEffect(() => {
@@ -53,22 +46,37 @@ const PostPage = (props) => {
         });
     }, []);
 
+    // Functions for updating these states
+    const onTitleChange = (e) => {
+        setTitle(e.target.value);
+    }
+    const onContentChange = (e) => {
+        setContent(e.target.value);
+    }
+    const onPublishedChange = (e) => {
+        setPublished(e.target.checked);
+    }
+
     // Functions for making api calls
     const onUpdate = () => {
-        
+        updatePost(title, content, published, id);
     }
     const onDelete = () => {
-
+        deletePost(id);
     }
     
     return (
         <main>
             <section className='post-section' >
                 <form onSubmit={null} >
-                    <TextInput label='Title: ' value={title} onChange={onTitleChange} />
-                    <TextArea label='Content: ' value={content} onChange={onContentChange} />
+                    <TextInput label='Title: ' value={title} handleChange={onTitleChange} />
+                    <TextArea label='Content: ' value={content} handleChange={onContentChange} />
+                    <fieldset className='publish-field'>
+                        <label htmlFor='post' >Publish? </label>
+                        <input type='checkbox' checked={published} onClick={onPublishedChange} name='post' />                        
+                    </fieldset>
                     <div>
-                        <Button text='Update' callback={null} />
+                        <Button text='Update' callback={onUpdate} />
                         <Button text='Delete' callback={null} />                        
                     </div>
                 </form>
