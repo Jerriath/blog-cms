@@ -85,6 +85,7 @@ main {
 .signin-section button {
     cursor: pointer;
     margin-top: 40%;
+    margin-bottom: 2rem;
 }
 /* ----- CreatePostPage styles ----- */
 .create-section {

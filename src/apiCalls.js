@@ -40,8 +40,13 @@ export const login = async (username, password) => {
         password
     };
     const userReturn = await axios.post(`${process.env.REACT_APP_APIROOT}/users/`, signinInfo);
+    let expiration = new Date();
+    console.log(expiration);
+    expiration.setSeconds(expiration.getSeconds() + 60);
+    console.log(expiration);
     localStorage.setItem('jwt', JSON.stringify(userReturn.data.token));
     localStorage.setItem('user', JSON.stringify(userReturn.data.user));
+    localStorage.setItem('expiration', JSON.stringify(expiration));
 }
 
 export const postMalone = async (title, content, published) => {
@@ -62,4 +67,13 @@ export const postMalone = async (title, content, published) => {
             }
         }
     );
+}
+
+export const updatePost = () => {
+    const token = JSON.parse(localStorage.getItem('jwt'));
+    const post = JSON.parse(localStorage.getItem('jwt'));
+}
+
+export const deletePost = () => {
+
 }

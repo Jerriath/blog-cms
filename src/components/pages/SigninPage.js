@@ -9,6 +9,7 @@ import Button from '../atoms/Button';
 
 // Importing node modules
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 //importing helper functions
@@ -20,19 +21,22 @@ const SigninPage = (props) => {
 
     const [user, setUser] = useState('');
     const [pass, setPass] = useState('');
+    const navigate = useNavigate();
     
     const onUserChange = event => {
         setUser(event.target.value);
     }
     const onPassChange = event => {
-        console.log(event.target.value);
         setPass(event.target.value);
     }
     const onSubmit = (e) => {
         e.preventDefault();
         login(user, pass);
+        navigate('/')
     }
     
+    // Essentially I want to have a post form and have that render instead of the post so I can edit; buttons will be there to update and delete
+
     return (
         <main>
             <section className='signin-section'>

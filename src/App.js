@@ -23,9 +23,17 @@ const App = () => {
     const [authorization, setAuthorization] = useState(false);
 
     useEffect(() => {
-        if (localStorage.getItem('jwt'))
+        if (localStorage.getItem('jwt')) 
         {
-            setAuthorization(true);
+            let currentDate = new Date();
+            console.log(JSON.parse(localStorage.getItem('expiration')));
+            if (localStorage.getItem('expiration') > currentDate.getSeconds())
+            {
+                setAuthorization(true);
+            }
+            else {
+                localStorage.clear();
+            }
         }
     })
 
