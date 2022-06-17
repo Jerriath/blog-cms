@@ -55,7 +55,7 @@ const PostPage = (props) => {
 
     // Functions for making api calls
     const onUpdate = () => {
-
+        
     }
     const onDelete = () => {
 
