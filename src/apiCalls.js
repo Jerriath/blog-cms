@@ -41,12 +41,11 @@ export const login = async (username, password) => {
     };
     const userReturn = await axios.post(`${process.env.REACT_APP_APIROOT}/users/`, signinInfo);
     let expiration = new Date();
-    console.log(expiration);
-    expiration.setSeconds(expiration.getSeconds() + 60);
-    console.log(expiration);
+    expiration.setHours(expiration.getHours() + 2);
     localStorage.setItem('jwt', JSON.stringify(userReturn.data.token));
     localStorage.setItem('user', JSON.stringify(userReturn.data.user));
     localStorage.setItem('expiration', JSON.stringify(expiration));
+    window.location.reload();
 }
 
 export const postMalone = async (title, content, published) => {

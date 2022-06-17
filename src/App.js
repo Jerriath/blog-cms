@@ -26,8 +26,8 @@ const App = () => {
         if (localStorage.getItem('jwt')) 
         {
             let currentDate = new Date();
-            console.log(JSON.parse(localStorage.getItem('expiration')));
-            if (localStorage.getItem('expiration') > currentDate.getSeconds())
+            let expiration = new Date(JSON.parse(localStorage.getItem('expiration')));
+            if (expiration.getTime() > currentDate.getTime())
             {
                 setAuthorization(true);
             }

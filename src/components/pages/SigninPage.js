@@ -29,10 +29,9 @@ const SigninPage = (props) => {
     const onPassChange = event => {
         setPass(event.target.value);
     }
-    const onSubmit = (e) => {
+    const onLogin = (e) => {
         e.preventDefault();
         login(user, pass);
-        navigate('/')
     }
     
     // Essentially I want to have a post form and have that render instead of the post so I can edit; buttons will be there to update and delete
@@ -40,7 +39,7 @@ const SigninPage = (props) => {
     return (
         <main>
             <section className='signin-section'>
-                <form onSubmit={onSubmit} id='signinForm' >
+                <form onSubmit={onLogin} id='signinForm' >
                     <TextInput label='Username: ' handleChange={onUserChange} value={user} placeHolder='Username...' />
                     <TextInput type='password' label='Password: ' handleChange={onPassChange} value={pass} placeHolder='Password...' />
                     <h2>Check out the Blog client instead <a href=''>here</a></h2>
