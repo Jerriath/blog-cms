@@ -85,6 +85,14 @@ export const updatePost = async (title, content, published, id) => {
     );
 }
 
-export const deletePost = () => {
-
+export const deletePost = async (id, navigate) => {
+    const token = JSON.parse(localStorage.getItem('jwt'));
+    await axios.delete(
+        `${process.env.REACT_APP_APIROOT}/posts/${id}`,
+        {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }
+    );
 }

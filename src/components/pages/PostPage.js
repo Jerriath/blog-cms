@@ -11,7 +11,7 @@ import Button from '../atoms/Button';
 
 // Importing node modules
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import he from 'he';
 
 
@@ -23,6 +23,7 @@ import { getSinglePost, getComments, updatePost, deletePost } from '../../apiCal
 const PostPage = (props) => {
     // States needed for page to render correctly
     const { id } = useParams();
+    const navigate = useNavigate();
     const [ comments, setcomments ] = useState([]);
 
     // States used for editing inputs
@@ -61,14 +62,17 @@ const PostPage = (props) => {
     const onUpdate = () => {
         updatePost(title, content, published, id);
     }
-    const onDelete = () => {
-        deletePost(id);
+    const onDelete = async () => {
+        // Navigate first because for some reason deleting first will cause navigate to not work
+        // I think because deleting causes state to update and refresh the page; this will cause the navigate line to not run... or something
+        navigate('/')
+        await deletePost(id);
     }
     
     return (
         <main>
             <section className='post-section' >
-                <form onSubmit={null} >
+                <form >
                     <TextInput label='Title: ' value={title} handleChange={onTitleChange} />
                     <TextArea label='Content: ' value={content} handleChange={onContentChange} />
                     <fieldset className='publish-field'>
@@ -77,7 +81,7 @@ const PostPage = (props) => {
                     </fieldset>
                     <div>
                         <Button text='Update' callback={onUpdate} />
-                        <Button text='Delete' callback={null} />                        
+                        <Button text='Delete' callback={onDelete} />                        
                     </div>
                 </form>
                 <article className='post-article' >
