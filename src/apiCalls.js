@@ -47,6 +47,7 @@ export const login = async (username, password) => {
     localStorage.setItem('jwt', JSON.stringify(userReturn.data.token));
     localStorage.setItem('user', JSON.stringify(userReturn.data.user));
     localStorage.setItem('expiration', JSON.stringify(expiration));
+    console.log(userReturn);
     window.location.reload();
 }
 
