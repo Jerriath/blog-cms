@@ -24,7 +24,15 @@ const Comments = (props) => {
         <section className='comments'>
             <CommentForm postId={props.postId} />
             {comments.map( comment => {
-                return <CommentCard key={comment._id} name={comment.name} message={comment.message} date={comment.date} />
+                return(
+                    <CommentCard 
+                        key={comment._id} 
+                        name={comment.name} 
+                        message={comment.message} 
+                        date={comment.date} 
+                        id={comment._id}
+                    />
+                )
             })}
         </section>
     );

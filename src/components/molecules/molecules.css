@@ -121,7 +121,7 @@
 }
 
 .row-font {
-
+    font-size: 1.5rem;
 }
 
 
@@ -129,6 +129,8 @@
 .comment-card {
     border-bottom: 1px solid darkgrey;
     margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 2px 2px 2px 2px rgb(150, 150, 150);
 }
 
 .comment-content {
@@ -137,6 +139,29 @@
 
 .comment-name {
     font-size: 1.5rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 0.25rem 0
+}
+
+.comment-delete {
+    margin: auto 0;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: rgb(69, 69, 69);
+    cursor: pointer;
+    transition: all 0.2s linear;
+    border-radius: 0.65rem;
+}
+
+.comment-delete:hover {
+    box-shadow: 1px 1px 1px 1px rgb(100, 100, 100);
+    background: rgba(0, 0, 0, 0.2);
+    color: black;
 }
 
 .comment-message {
@@ -144,7 +169,7 @@
 }
 
 .comment-footer {
-
+    text-align: end;
 }
 
 .footer-font {
@@ -155,6 +180,7 @@
 /* ---------- CommentForm styles ---------- */
 .comment-form {
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 .comment-form form {

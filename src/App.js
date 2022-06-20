@@ -29,7 +29,6 @@ const App = () => {
             let expiration = new Date(JSON.parse(localStorage.getItem('expiration')));
             if (expiration.getTime() > currentDate.getTime())
             {
-                console.log(expiration);
                 setAuthorization(true);
             }
             else {
