@@ -37,8 +37,8 @@ const CommentForm = (props) => {
 
 
     return(
-        <article className='comment-form' id='commentForm'>
-            <form onSubmit={onSubmit}>
+        <article className='comment-form' >
+            <form onSubmit={onSubmit} id='commentForm' >
                 <TextInput label='Name: ' handleChange={onInputChange} value={input} placeHolder='Whats your name?' />
                 <TextArea label='Leave a Comment: ' handleChange={onAreaChange} value={area} placeHolder='Share what you think...' />
                 <Button text='Submit' type='submit' form='commentForm' />
