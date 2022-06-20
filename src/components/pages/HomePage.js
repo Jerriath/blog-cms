@@ -32,6 +32,9 @@ const HomePage = () => {
     return (
         <main>
             <HomeSplash />
+            <h2 className='posts-header' >
+                Published Posts: 
+            </h2>
             <PostsSlider posts={newPosts} />
             <OlderPosts posts={oldPosts} />
         </main>

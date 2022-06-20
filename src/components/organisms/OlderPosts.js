@@ -21,8 +21,16 @@ const OlderPosts = (props) => {
 
     return(
         <section className='old-section' >
-            <h1 className='old-header' >Older Posts</h1>
-            {props.posts.map((post, index) => {return(<PostRow colorScheme={index%2 ? 'post-row-light' : 'post-row-dark'} key={index} title={post.title} date={post.date} />)})}
+            <h2 className='old-header' >Unpublished Posts: </h2>
+            {props.posts.map((post, index) => { return(
+                <PostRow 
+                    colorScheme={index%2 ? 'post-row-light' : 'post-row-dark'} 
+                    key={index} 
+                    title={post.title} 
+                    date={post.date} 
+                    id={post._id} 
+                />)})
+            }
         </section>
     );
 };

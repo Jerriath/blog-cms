@@ -10,6 +10,15 @@ main {
     margin-top: 4rem;
 }
 
+.posts-header {
+    font-size: 2rem;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+    margin: 4rem 20rem;
+    text-align: center;
+
+}
+
  /*----- AboutPage styles ----- */
 .about-section {
     background: linear-gradient(to right,rgb(175, 175, 175), rgb(240, 240, 240));
@@ -58,6 +67,11 @@ main {
     padding: 0 5rem;
     text-indent: 3rem;
     font-size: 1.5rem;
+}
+
+.button-holder {
+    display: flex;
+    justify-content: center;
 }
 /* ----- SigninPage styles ----- */
 .signin-section {

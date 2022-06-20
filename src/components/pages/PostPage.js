@@ -34,6 +34,7 @@ const PostPage = (props) => {
     // Hooks for retrieving data from database
     useEffect(() => {
         getSinglePost(id).then( retrievedPost => {
+            console.log(id);
             retrievedPost.title = he.decode(retrievedPost.title);
             retrievedPost.content = he.decode(retrievedPost.content);
             setTitle(retrievedPost.title);
@@ -77,9 +78,9 @@ const PostPage = (props) => {
                     <TextArea label='Content: ' value={content} handleChange={onContentChange} />
                     <fieldset className='publish-field'>
                         <label htmlFor='post' >Publish? </label>
-                        <input type='checkbox' checked={published} onClick={onPublishedChange} name='post' />                        
+                        <input type='checkbox' checked={published} onChange={onPublishedChange} name='post' />                        
                     </fieldset>
-                    <div>
+                    <div className='button-holder' >
                         <Button text='Update' callback={onUpdate} />
                         <Button text='Delete' callback={onDelete} />                        
                     </div>

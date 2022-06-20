@@ -3,12 +3,14 @@ import axios from 'axios';
 export const getPosts = async () => {
     let posts = (await axios.get(`${process.env.REACT_APP_APIROOT}/posts`)).data;
     posts = posts.posts;
-    posts = posts.filter( post => {
+    let published = posts.filter( post => {
         return post.published;
     })
-    let newPosts = posts.slice(0, 5);
-    let oldPosts = posts.slice(5);
-    let postsArray = [newPosts, oldPosts];
+
+    let unpublished = posts.filter( post => {
+        return !post.published;
+    })
+    let postsArray = [published, unpublished];
     return postsArray;
 }
 

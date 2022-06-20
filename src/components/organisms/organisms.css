@@ -17,6 +17,7 @@
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 999;
 }
 
 .header-font {
@@ -108,8 +109,10 @@
 }
 
 .old-header {
-    font-size: 1.75rem;
+    font-size: 2rem;
+    font-weight: 700;
     padding: 0 1rem;
+    margin: 4rem 0;
     margin-bottom: 0.75rem;
     border-bottom: 1px solid rgb(200, 200, 200);
 }
