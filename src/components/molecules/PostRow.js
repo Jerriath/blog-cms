@@ -15,7 +15,7 @@ const PostRow = (props) => {
                 <h3 className='row-font'>
                     {props.title}
                 </h3>
-                <h3 className='row-font'>
+                <h3>
                     {moment(props.date).format('MM/DD/YYYY')}
                 </h3>
             </div>
