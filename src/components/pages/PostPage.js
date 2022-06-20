@@ -31,7 +31,7 @@ const PostPage = (props) => {
     const [content, setContent] = useState('');
     const [published, setPublished] = useState(false);
 
-    // Hooks for retrieving data from database
+    // Hooks for retrieving post from database
     useEffect(() => {
         getSinglePost(id).then( retrievedPost => {
             console.log(id);
@@ -42,6 +42,7 @@ const PostPage = (props) => {
             setPublished(retrievedPost.published);
         });
     }, []);
+    // Hook for retrieving comments from database
     useEffect(() => {
         getComments(id).then( retrievedcomments => {
             setcomments(retrievedcomments);
@@ -60,14 +61,13 @@ const PostPage = (props) => {
     }
 
     // Functions for making api calls
-    const onUpdate = () => {
-        updatePost(title, content, published, id);
+    const onUpdate = async (e) => {
+        e.preventDefault();
+        await updatePost(title, content, published, id);
     }
-    const onDelete = async () => {
-        // Navigate first because for some reason deleting first will cause navigate to not work
-        // I think because deleting causes state to update and refresh the page; this will cause the navigate line to not run... or something
-        navigate('/')
-        await deletePost(id);
+    const onDelete = async (e) => {
+        e.preventDefault();
+        await deletePost(id, navigate);
     }
     
     return (

@@ -85,6 +85,7 @@ export const updatePost = async (title, content, published, id) => {
             }
         }
     );
+    window.location.reload();
 }
 
 export const deletePost = async (id, navigate) => {
@@ -97,4 +98,5 @@ export const deletePost = async (id, navigate) => {
             }
         }
     );
+    await navigate('/');
 }
