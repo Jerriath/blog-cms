@@ -8,7 +8,7 @@ As said before, this application was written in ReactJS with the help of create-
 
 ## CMS
 
-This specific frontend application is used by authorized users for managing the documents in the backend. One of the main differences between this application (CMS) and the blog-client is that the routes used in the CMS are protected by a passport JWT strategy for checking if a jwt is sent in the request headers. This allows for admin-life privilleges for editing the documents in the backend.
+This specific frontend application is used by authorized users for managing the documents in the backend. One of the main differences between this application (CMS) and the blog-client is that the routes used in the CMS are protected by a passport JWT strategy for checking if a jwt is sent in the request headers. This allows for admin-life privilleges for editing the documents in the backend. You can checkout the live demo [here](https://blog-cms-mauve.vercel.app/)
 
 # Backend
 
