@@ -6,14 +6,29 @@ import './molecules.css';
 import moment from 'moment';
 
 
+// Importing helper functions
+import { deleteComment } from '../../apiCalls';
+
+
 // Component that is being exported
 const CommentCard = (props) => {
+
+    // Function for deleting comment
+    const onDelete = () => {
+        deleteComment(props.id);
+    }
+
     return(
         <article className='comment-card'>
             <div className='comment-content'>
-                <h3 className='comment-name'>
-                    {props.name}
-                </h3>
+                <form className='comment-name' onSubmit={onDelete} >
+                    <h3>
+                        {props.name}
+                    </h3>
+                    <button type='submit' className='comment-delete' >
+                        X
+                    </button>
+                </form>
                 <p className='comment-message'>
                     {props.message}
                 </p>

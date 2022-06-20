@@ -100,3 +100,16 @@ export const deletePost = async (id, navigate) => {
     );
     await navigate('/');
 }
+
+export const deleteComment = async (id) => {
+    const token = JSON.parse(localStorage.getItem('jwt'));
+    await axios.delete(
+        `${process.env.REACT_APP_APIROOT}/comments/${id}`,
+        {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }
+    )
+    window.location.reload();
+}
